@@ -1,24 +1,10 @@
-# README
+# TOP Ruby on Rails Forms Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[link](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms?ref=lnav)
 
-Things you may want to cover:
+Project walked through setting up forms in rails using several different methods:
+1. std HTML
+2. form_tag
+3. form_for
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Worked around with the CSS of the views as well.  

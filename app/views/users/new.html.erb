@@ -1,0 +1,36 @@
+<%# 1. Use typical HTML form %>
+
+<%# <form accept-charset='UTF-8' action='/users' method='post'> %>
+  <%# <label for='username'>Username:</label> %>
+  <%# <input type='text' id='username' name="user[username]"> %>
+  <%# <label for='email'>Email:</label> %>
+  <%# <input type='text' id='email' name="user[email]"> %>
+  <%# <label for='password'>Password:</label> %>
+  <%# <input type='password' id='password' name="user[password]"> %>
+  <%# <input type='hidden' name='authenticity_token' value="<%= form_authenticity_token >"> %>
+  <%# <input type='submit' value='Submit'> %>
+<%# </form> %>
+
+<%# 2. Use form_tag  %>
+
+<%# form_tag('/users', method: :post) do%>
+  <%# label_tag 'username', 'Username: ', class: 'user_label'<br/> %>
+  <%# text_field_tag 'user[username]', nil, class: 'user_input'<br/> %>
+  <%# label_tag 'email', 'Email: ', class: 'user_label'<br/> %>
+  <%# text_field_tag 'user[email]', nil, class: 'user_input'<br/> %>
+  <%# label_tag 'password', 'Password: ', class: 'user_label'<br/> %>
+  <%# password_field_tag 'user[password]', nil,  class: 'user_input'<br/> %>
+  <%# submit_tag 'Submit', class: 'sub_btn'%>
+<%# end %>
+
+<%# 3. Use form_for %>
+
+<%= form_for @user, url: {action: 'create'} do |f|%>
+  <%= f.label :username, 'Enter Username: ', class: 'user_label' %><br/>
+  <%= f.text_field :username, placeholder: 'your username', class: 'user_input' %><br/>
+  <%= f.label :email, 'Enter Email: ', class: 'user_label' %><br/>
+  <%= f.text_field :email, placeholder: 'your email', class: 'user_input' %><br/>
+  <%= f.label :password, 'Enter Password: ', class: 'user_label' %><br/>
+  <%= f.password_field :password, placeholder: 'password', class: 'user_input' %><br/>
+  <%= f.submit 'Submit', class: 'sub_btn' %>
+<% end %>

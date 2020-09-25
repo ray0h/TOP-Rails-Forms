@@ -4,6 +4,19 @@
 
 form {
   background-color:lightgray;
+  padding-top: 10px;
+  width: 400px;
+}
+
+.error_container {
+  border: 1px solid red;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  width: 400px;
+} 
+
+.error {
+  margin: 0 0 0 10px;
 }
 
 .user_label {

@@ -24,6 +24,14 @@
 <%# end %>
 
 <%# 3. Use form_for %>
+<% if @user.errors.any? %>
+  <div class='error_container'>
+    <% @user.errors.full_messages.each do |error| %>
+      <div class='error'> <%= error %> </div>
+    <% end %>
+  </div>
+<% end %>
+
 <%= form_for @user, url: {action: 'update'} do |f|%>
   <%= f.label :username, 'Enter Username: ', class: 'user_label' %><br/>
   <%= f.text_field :username, placeholder: 'your username', class: 'user_input' %><br/>
